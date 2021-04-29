@@ -2,63 +2,59 @@
 
 :root {
 
-/* Colors: */
---app-color-ff6e4e: #FF6E4E;
---app-color-38ccf5: #38CCF5;
---app-color-000000: #000000;
---app-color-ffffff: #FFFFFF;
---app-color-fbfbfb: #FBFBFB;
---app-color-dedede: #DEDEDE;
---app-color-707070: #707070;
---app-color-008cc9: #008CC9;
---app-color-38ccf51c: #38CCF5;
---app-color-0052ef: #0052EF;
---app-color-e4e4e4: #E4E4E4;
---app-color-0037ff80: #0037FF;
---app-color-00509d: #00509D;
---app-color-006cc9: #006CC9;
+  /* Colors: */
+  --app-color-ff6e4e: #FF6E4E;
+  --app-color-38ccf5: #38CCF5;
+  --app-color-000000: #000000;
+  --app-color-ffffff: #FFFFFF;
+  --app-color-fbfbfb: #FBFBFB;
+  --app-color-dedede: #DEDEDE;
+  --app-color-707070: #707070;
+  --app-color-008cc9: #008CC9;
+  --app-color-38ccf51c: #38CCF5;
+  --app-color-0052ef: #0052EF;
+  --app-color-e4e4e4: #E4E4E4;
+  --app-color-0037ff80: #0037FF;
+  --app-color-00509d: #00509D;
+  --app-color-006cc9: #006CC9;
 
-/* Font/text values */
---app-font-family-roboto: Roboto;
---app-font-style-normal: normal;
---app-font-weight-normal: normal;
---app-font-size-14: 14px;
---app-font-size-16: 16px;
---app-font-size-18: 18px;
---app-font-size-25: 25px;
---app-font-size-28: 28px;
---app-font-size-34: 34px;
---app-font-size-45: 45px;
---app-font-size-54: 54px;
---app-character-spacing-0: 0px;
---app-line-spacing-17: 17px;
---app-line-spacing-19: 19px;
---app-line-spacing-22: 22px;
---app-line-spacing-30: 30px;
---app-line-spacing-34: 34px;
---app-line-spacing-41: 41px;
---app-line-spacing-54: 54px;
---app-line-spacing-65: 65px;
+  /* Font/text values */
+  --app-font-family-roboto: Roboto;
+  --app-font-style-normal: normal;
+  --app-font-weight-normal: normal;
+  --app-font-size-14: 14px;
+  --app-font-size-16: 16px;
+  --app-font-size-18: 18px;
+  --app-font-size-25: 25px;
+  --app-font-size-28: 28px;
+  --app-font-size-34: 34px;
+  --app-line-spacing-37: 37px; 
+  --app-font-size-45: 45px;
+  --app-font-size-54: 54px;
+  --app-character-spacing-0: 0px;
+  --app-line-spacing-17: 17px;
+  --app-line-spacing-19: 19px;
+  --app-line-spacing-22: 22px;
+  --app-line-spacing-30: 30px;
+  --app-line-spacing-34: 34px;
+  --app-line-spacing-41: 41px;
+  --app-line-spacing-54: 54px;
+  --app-line-spacing-65: 65px;
 }
 
 // disabled
 // Custom variables.
 $baseFontSizePx: 16px;
 $grid-breakpoints: ();
-$grid-breakpoints: map-merge(
-  (
-    xs: 0,
+$grid-breakpoints: map-merge((xs: 0,
     sm: 576px,
     md: 768px,
     lg: 992px,
     xl: 1200px,
   ),
-  $grid-breakpoints
-);
+  $grid-breakpoints);
 $spacers: ();
-$spacers: map-merge(
-  (
-    0: 0,
+$spacers: map-merge((0: 0,
     1: 1px,
     2: 2px,
     3: 3px,
@@ -108,8 +104,7 @@ $spacers: map-merge(
     128: 128px,
     112: rem(112),
   ),
-  $spacers
-);
+  $spacers);
 
 //Colors
 $white: #ffffff;
@@ -161,8 +156,10 @@ $text-grey-1d: #f5f5f5;
 // Defaults
 $baseFontSizePx: 16;
 $font-size-base: 1rem;
-$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif;
-$pass-font: "pass-font", "Roboto", "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Roboto",
+"Helvetica Neue",
+Arial,
+sans-serif;
 $font-family-base: $font-family-sans-serif;
 $border-radius: 0.125rem;
 $enable-shadows: true;

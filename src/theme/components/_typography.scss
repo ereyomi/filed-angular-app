@@ -4,25 +4,24 @@
 $font-size-base: 1rem;
 $font-family-base: $font-family-sans-serif;
 
-.montserrat-regular-font {
+.base-regular-font {
   font-family: $font-family-base;
   font-weight: normal;
 }
-.montserrat-medium-font {
+
+.base-medium-font {
   font-family: $font-family-base;
   font-weight: 500;
 }
-.montserrat-bold-font {
+
+.base-bold-font {
   font-family: $font-family-base;
   font-weight: bold;
 }
-.montserrat-semibold-font {
+
+.base-semibold-font {
   font-family: $font-family-base;
   font-weight: 600;
-}
-
-.helvetica-neue-regular {
-  font-family: $font-family-base;
 }
 
 .text-weight-medium {
@@ -42,13 +41,14 @@ $font-family-base: $font-family-sans-serif;
 }
 
 h1,
-h2, 
+h2,
 h3 {
   font-family: $font-family-base;
   font-weight: 500;
   letter-spacing: 0;
   color: $black;
 }
+
 h1 {
   font-size: rem(37) !important;
   line-height: rem(40) !important;
@@ -102,6 +102,7 @@ h3 {
     color: $white;
     letter-spacing: rem(0.25);
   }
+
   .text2-med {
     @extend .text2-med;
     color: $white;
@@ -206,6 +207,106 @@ h3 {
   font-size: rem(37) !important;
   line-height: rem(40) !important;
 }
+
 .overflow-x {
   overflow: hidden !important;
+}
+
+.ls-0 {
+  letter-spacing: 0;
+}
+
+.ls-09 {
+  letter-spacing: 0.9px;
+}
+
+/* Character Styles */
+.roboto-—-14pt-body-3 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-14);
+  line-height: var(--app-line-spacing-17);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-16pt-body-2 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-16);
+  line-height: var(--app-line-spacing-19);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-18pt-body-text {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-18);
+  line-height: var(--app-line-spacing-22);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-25pt-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-25);
+  line-height: var(--app-line-spacing-30);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-28pt-h4 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-28);
+  line-height: var(--app-line-spacing-34);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-30pt-h3 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-34);
+  line-height: var(--app-line-spacing-37);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-34pt-h3 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-34);
+  line-height: var(--app-line-spacing-41);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-45pt-h2 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-45);
+  line-height: var(--app-line-spacing-54);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-54pt-h1 {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: var(--app-font-size-54);
+  line-height: var(--app-line-spacing-65);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
 }
