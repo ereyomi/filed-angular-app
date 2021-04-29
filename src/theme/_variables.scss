@@ -1,0 +1,114 @@
+/** CSS Variables **/
+
+:root {
+
+/* Colors: */
+--app-color-ff6e4e: #FF6E4E;
+--app-color-38ccf5: #38CCF5;
+--app-color-000000: #000000;
+--app-color-ffffff: #FFFFFF;
+--app-color-fbfbfb: #FBFBFB;
+--app-color-dedede: #DEDEDE;
+--app-color-707070: #707070;
+--app-color-008cc9: #008CC9;
+--app-color-38ccf51c: #38CCF5;
+--app-color-0052ef: #0052EF;
+--app-color-e4e4e4: #E4E4E4;
+--app-color-0037ff80: #0037FF;
+--app-color-00509d: #00509D;
+--app-color-006cc9: #006CC9;
+
+/* Font/text values */
+--app-font-family-roboto: Roboto;
+--app-font-style-normal: normal;
+--app-font-weight-normal: normal;
+--app-font-size-14: 14px;
+--app-font-size-16: 16px;
+--app-font-size-18: 18px;
+--app-font-size-25: 25px;
+--app-font-size-28: 28px;
+--app-font-size-34: 34px;
+--app-font-size-45: 45px;
+--app-font-size-54: 54px;
+--app-character-spacing-0: 0px;
+--app-line-spacing-17: 17px;
+--app-line-spacing-19: 19px;
+--app-line-spacing-22: 22px;
+--app-line-spacing-30: 30px;
+--app-line-spacing-34: 34px;
+--app-line-spacing-41: 41px;
+--app-line-spacing-54: 54px;
+--app-line-spacing-65: 65px;
+}
+
+// disabled
+// Custom variables.
+$baseFontSizePx: 16px;
+$grid-breakpoints: ();
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+  ),
+  $grid-breakpoints
+);
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px,
+    8: 8px,
+    11: 11px,
+    10: 10px,
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    15: 15px,
+    16: 16px,
+    17: 17px,
+    18: 18px,
+    19: 19px,
+    20: 20px,
+    21: 21px,
+    22: 22px,
+    23: 23px,
+    24: 24px,
+    26: 26px,
+    27: 27px,
+    28: 28px,
+    30: 30px,
+    32: 32px,
+    36: 36px,
+    37: 37px,
+    38: 38px,
+    40: 40px,
+    42: 42px,
+    44: 44px,
+    46: 46px,
+    48: 48px,
+    52: 52px,
+    56: 56px,
+    60: 60px,
+    64: 64px,
+    72: 72px,
+    73: 73px,
+    80: 80px,
+    90: 90px,
+    93: 93px,
+    96: 96px,
+    149: 149px,
+    128: 128px,
+    112: rem(112),
+  ),
+  $spacers
+);
+
+/** Custom colors **/
