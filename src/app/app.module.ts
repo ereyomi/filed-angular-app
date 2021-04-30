@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { InputComponent } from './shared/input/input.component';
 import { CardComponent } from './shared/card/card.component';
 import { RadioInputComponent } from './shared/radio-input/radio-input.component';
+import { SelectComponent } from './shared/select/select.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RadioInputComponent } from './shared/radio-input/radio-input.component'
     WelcomeComponent,
     InputComponent,
     CardComponent,
-    RadioInputComponent
+    RadioInputComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
