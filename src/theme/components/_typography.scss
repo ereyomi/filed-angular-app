@@ -251,6 +251,16 @@ h3 {
   color: var(--app-color-000000);
 }
 
+.roboto-—-s20-h26-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: rem(20);
+  line-height: rem(26);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
 .roboto-—-25pt-mobile {
   font-family: var(--app-font-family-roboto);
   font-style: var(--app-font-style-normal);
@@ -271,10 +281,10 @@ h3 {
   color: var(--app-color-000000);
 }
 
-.roboto-—-30pt-h3 {
+.roboto-—-30pt-mobile {
   font-family: var(--app-font-family-roboto);
   font-style: var(--app-font-style-normal);
-  font-weight: var(--app-font-weight-normal);
+  font-weight: var(--app-font-weight-bold);
   font-size: var(--app-font-size-34);
   line-height: var(--app-line-spacing-37);
   letter-spacing: var(--app-character-spacing-0);
@@ -309,4 +319,8 @@ h3 {
   line-height: var(--app-line-spacing-65);
   letter-spacing: var(--app-character-spacing-0);
   color: var(--app-color-000000);
+}
+
+.text-align-center {
+  text-align: center;
 }
