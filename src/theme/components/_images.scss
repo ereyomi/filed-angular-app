@@ -1,6 +1,11 @@
 @import "../mixins";
 
 .icon-w20-h14 {
-    height: rem(14) !important;
-    width: rem(20) !important;
+    width: rem(20);
+    height: rem(14);
+}
+
+.icon-w56-h40 {
+    width: rem(56);
+    height: rem(40);
 }

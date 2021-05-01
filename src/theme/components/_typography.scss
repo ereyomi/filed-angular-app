@@ -261,6 +261,16 @@ h3 {
   color: var(--app-color-000000);
 }
 
+.roboto-—-s20-h24-bold-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: bold;
+  font-size: rem(20);
+  line-height: rem(24);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
 .roboto-—-s20-h26-mobile {
   font-family: var(--app-font-family-roboto);
   font-style: var(--app-font-style-normal);
@@ -280,6 +290,8 @@ h3 {
   letter-spacing: var(--app-character-spacing-0);
   color: var(--app-color-000000);
 }
+
+
 
 .roboto-—-s22-h30-bold-mobile {
   font-family: var(--app-font-family-roboto);
