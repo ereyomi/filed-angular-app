@@ -10,6 +10,35 @@
     height: rem(40);
 }
 
+.custom-icon-70-by-70 {
+    position: absolute !important;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: rem(70);
+    height: rem(70);
+}
+
+.icon-w70-h70 {
+    width: rem(70);
+    height: rem(70);
+}
+
+.icon-w120-h132 {
+    width: rem(120);
+    height: rem(132);
+}
+
+.custom-icon-120-by-132 {
+    position: absolute !important;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: rem(120);
+    height: rem(132);
+    object-fit: contain;
+}
+
 .img-w80-h80 {
     width: rem(80);
     height: rem(80);
