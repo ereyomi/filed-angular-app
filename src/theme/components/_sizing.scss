@@ -16,6 +16,10 @@
 }
 
 @media only screen and (min-width: $md-breakpoint) {
+    .w-md-80 {
+        width: 80%;
+    }
+
     .w568px-md {
         width: rem(568);
     }
@@ -24,7 +28,13 @@
         width: rem(456);
     }
 
-    .w657px-md{
+    .w657px-md {
         width: rem(657);
+    }
+}
+
+@media only screen and (min-width: $xl-breakpoint) {
+    .w-xl-80 {
+        width: 80%;
     }
 }

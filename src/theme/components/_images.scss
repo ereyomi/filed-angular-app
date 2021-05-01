@@ -27,3 +27,12 @@
     height: rem(440);
     object-fit: cover;
 }
+
+@media only screen and (min-width: $xl-breakpoint) {
+    .img-w728-h440-xl {
+        width: rem(728);
+        height: rem(440);
+        object-fit: cover;
+    }
+
+}

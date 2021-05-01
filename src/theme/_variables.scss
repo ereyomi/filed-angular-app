@@ -57,7 +57,8 @@ $grid-breakpoints: map-merge((xs: 0,
     md: 768px,
     lg: 992px,
     xl: 1200px,
-  ),
+    xxl: 1400px,
+    xxxl: 1920px),
   $grid-breakpoints);
 $spacers: ();
 $spacers: map-merge((0: 0,
@@ -207,6 +208,8 @@ $btn-border-radius: rem(3);
 
 /** breakpoint **/
 $md-breakpoint: 768px;
+
+$xl-breakpoint: 1200px;
 
 @media only screen and (min-width: $md-breakpoint) {
   $btn-font-size: rem(20);

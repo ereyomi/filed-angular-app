@@ -5,17 +5,19 @@
     @include display-grid;
 }
 
-.custom-grid-size-50-by-50 {
+.custom-grid {
     width: 100%;
     @include display-grid;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 100%;
     grid-template-rows: auto;
-    place-self: center !important;
+    place-items: center !important;
 }
 
-@media only screen and (min-width: $md-breakpoint) {
-    .custom-grid-size-50-by-50-md {
+@media only screen and (min-width: $md-breakpoint) {}
+
+@media only screen and (min-width: $xl-breakpoint) {
+    .custom-grid {
         width: 100%;
         @include display-grid;
         display: grid;
