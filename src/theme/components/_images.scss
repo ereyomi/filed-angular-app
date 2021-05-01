@@ -29,9 +29,9 @@
 }
 
 .custom-bg-b {
-    background: url("~src/assets/images/group-391.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("~src/assets/images/group-391.svg");
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
     background-size: cover;
 }
 
