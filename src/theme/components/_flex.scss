@@ -11,7 +11,9 @@
 .display-flex {
     @include flexbox;
 }
-
+.flex-row {
+    flex-direction: row;
+}
 .align-self-start {
     align-self: flex-start !important;
 }

@@ -12,19 +12,22 @@
 
   @return $pixels / $context * 1rem;
 }
+
 @mixin make-row($gutter: $grid-gutter-width) {
   display: flex;
   flex-wrap: wrap;
   margin-right: -$gutter / 2;
   margin-left: -$gutter / 2;
 }
+
 // For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths-important(
-  $max-widths: $container-max-widths,
-  $breakpoints: $grid-breakpoints
-) {
-  @each $breakpoint, $container-max-width in $max-widths {
+@mixin make-container-max-widths-important($max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints) {
+
+  @each $breakpoint,
+  $container-max-width in $max-widths {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
+
     .col#{$infix}-reset-width {
       @include media-breakpoint-up($breakpoint, $breakpoints) {
         max-width: $container-max-width !important;
@@ -37,6 +40,7 @@
 @mixin make-row-grid($breakpoints: $grid-breakpoints) {
   @each $breakpoint in $breakpoints {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
+
     .row#{$infix}-enable {
       @include make-row();
     }
@@ -49,6 +53,12 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+// grid
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
 }
 
 @mixin flex-direction($direction: row) {
@@ -85,49 +95,59 @@
   @-webkit-keyframes #{$name} {
     @content;
   }
+
   @-moz-keyframes #{$name} {
     @content;
   }
+
   @-ms-keyframes #{$name} {
     @content;
   }
+
   @keyframes #{$name} {
     @content;
   }
 }
 
 @mixin transform($transforms) {
-	-webkit-transform: $transforms;
-	-moz-transform: $transforms;
-	-ms-transform: $transforms;
-	transform: $transforms;
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
 }
 
 // placeholder mixin
 @mixin inputPlaceholder() {
-    $selector: '';
-    $prefixes: (
-        moz: "::-moz",
-        webkit: "::-webkit",
-        ie: ":-ms"
+  $selector: '';
+  $prefixes: (moz: "::-moz",
+      webkit: "::-webkit",
+      ie: ":-ms"
     );
-    @each $prop, $value in $prefixes {
-        @if $prop != "moz" {
-            $selector: #{$value}-input-placeholder;
-        } @else {
-            $selector: #{$value}-placeholder;
-        }
-        @if & {
-            &#{$selector} {
-                @content;
-            }
-        } @else {
-            #{$selector} {
-                @content;
-            }
-        }
+
+  @each $prop,
+  $value in $prefixes {
+    @if $prop !="moz" {
+      $selector: #{$value}-input-placeholder;
     }
-    &::placeholder {
-      @content;
+
+    @else {
+      $selector: #{$value}-placeholder;
     }
+
+    @if & {
+      &#{$selector} {
+        @content;
+      }
+    }
+
+    @else {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+
+  &::placeholder {
+    @content;
+  }
 }
