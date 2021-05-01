@@ -120,9 +120,13 @@ $spacers: map-merge((0: 0,
     144: 144px,
     149: 149px,
     120: 120px,
+    125: 125px,
     128: 128px,
     130: 130px,
     143: 143px,
+    145: 145px,
+    170: 170px,
+    173: 173px,
     175: 175px,
     178: 178px,
     212: 212px,
@@ -214,6 +218,7 @@ $btn-border-radius: rem(3);
 $md-breakpoint: 768px;
 
 $xl-breakpoint: 1200px;
+$xxxl-breakpoint: 1920px;
 
 @media only screen and (min-width: $md-breakpoint) {
   $btn-font-size: rem(20);

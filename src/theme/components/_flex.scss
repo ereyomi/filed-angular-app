@@ -12,6 +12,10 @@
     display: none;
 }
 
+.display-block {
+    display: block;
+}
+
 .display-flex {
     @include flexbox;
 }
@@ -121,7 +125,11 @@
         align-items: center !important;
     }
 
+    .display-none-md {
+        display: none;
+    }
+
     .display-block-md {
-        display: block !important;
+        display: block;
     }
 }

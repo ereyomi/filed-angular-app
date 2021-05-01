@@ -36,7 +36,14 @@
     right: 0;
     width: rem(120);
     height: rem(132);
-    object-fit: contain;
+}
+
+.custom-icon-140-by-140,
+.custom-icon-370-366,
+.custom-icon-80-80,
+.custom-icon-38-38,
+.custom-icon-19-19 {
+    display: none;
 }
 
 .img-w80-h80 {
@@ -48,12 +55,6 @@
 .img-w158-h54 {
     width: rem(158);
     height: rem(54);
-    object-fit: cover;
-}
-
-.img-w728-h440 {
-    width: rem(728);
-    height: rem(440);
     object-fit: cover;
 }
 
@@ -75,11 +76,88 @@
     }
 }
 
-@media only screen and (min-width: $xl-breakpoint) {
+@media only screen and (min-width: $xxxl-breakpoint) {
     .img-w728-h440-xl {
         width: rem(728);
         height: rem(440);
         object-fit: cover;
     }
 
+    .custom-icon-140-by-140 {
+        display: block !important;
+        position: absolute !important;
+        z-index: 2;
+        top: 160px;
+        right: 126px;
+        width: rem(120);
+        height: rem(132);
+
+        image {
+            width: rem(120);
+            height: rem(132);
+            object-fit: contain;
+        }
+    }
+
+    .custom-icon-370-366 {
+        display: block !important;
+        position: absolute !important;
+        z-index: 2;
+        top: 118px;
+        right: 574px;
+
+        image {
+            width: rem(370);
+            height: rem(366);
+            object-fit: contain;
+        }
+    }
+
+    .custom-icon-80-80 {
+        display: block !important;
+        position: absolute !important;
+        z-index: 2;
+        top: 450px;
+        right: 920px;
+
+        image {
+            width: rem(80);
+            height: rem(80);
+            object-fit: contain;
+        }
+    }
+
+    .custom-icon-38-38 {
+        display: block !important;
+        position: absolute !important;
+        z-index: 2;
+        top: 552px;
+        right: 1007px;
+
+        image {
+            width: rem(38);
+            height: rem(38);
+            object-fit: contain;
+        }
+    }
+
+    .custom-icon-19-19 {
+        display: block !important;
+        position: absolute !important;
+        z-index: 2;
+        top: 628px;
+        right: 1062px;
+
+        image {
+            width: rem(19);
+            height: rem(19);
+            object-fit: contain;
+        }
+    }
+
+    .img-w728-h440-xxxl {
+        width: rem(728);
+        height: rem(440);
+        object-fit: cover;
+    }
 }
