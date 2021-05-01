@@ -9,3 +9,22 @@
     width: rem(80);
     height: rem(80);
 }
+
+.w158-h54 {
+    width: rem(158);
+    height: rem(54);
+}
+
+@media only screen and (min-width: $md-breakpoint) {
+    .w568px-md {
+        width: rem(568);
+    }
+
+    .w456px-md {
+        width: rem(456);
+    }
+
+    .w657px-md{
+        width: rem(657);
+    }
+}

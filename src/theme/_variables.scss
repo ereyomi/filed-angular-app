@@ -41,6 +41,11 @@
   --app-line-spacing-41: 41px;
   --app-line-spacing-54: 54px;
   --app-line-spacing-65: 65px;
+  --app-breakpoint-xs: 0;
+  --app-breakpoint-sm: 576px;
+  --app-breakpoint-md: 768px;
+  --app-breakpoint-lg: 992px;
+  --app-breakpoint-xl: 1200px;
 }
 
 // disabled
@@ -104,13 +109,19 @@ $spacers: map-merge((0: 0,
     73: 73px,
     78: 78px,
     80: 80px,
+    85: 85px,
     90: 90px,
     93: 93px,
     96: 96px,
     102: 102px,
+    144: 144px,
     149: 149px,
     128: 128px,
-    112: rem(112),
+    130: 130px,
+    143: 143px,
+    175: 175px,
+    178: 178px,
+    212: 212px,
   ),
   $spacers);
 
@@ -194,4 +205,9 @@ $btn-font-size: rem(12);
 $btn-line-height: rem(16);
 $btn-border-radius: rem(3);
 
-/** Custom colors **/
+/** breakpoint **/
+$md-breakpoint: 768px;
+
+@media only screen and (min-width: $md-breakpoint) {
+  $btn-font-size: rem(20);
+}

@@ -11,3 +11,10 @@
 .color-white {
     color: $white;
 }
+
+@media only screen and (min-width: $md-breakpoint) {
+
+    .app-color-000000-desktop {
+        color: var(--app-color-000000);
+    }
+}

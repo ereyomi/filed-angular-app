@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .card {
     background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
     background: #FBFBFB 0% 0% no-repeat padding-box;
@@ -5,4 +8,11 @@
     border-radius: 12px;
     opacity: 1;
     padding: 40px 20px;
+}
+
+@media only screen and (min-width: $md-breakpoint) {
+
+    .card {
+        padding: 100px 78px 50px 78px;
+    }
 }

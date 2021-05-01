@@ -151,3 +151,9 @@
     @content;
   }
 }
+
+@mixin customSimpleDynamicBreakPoint($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

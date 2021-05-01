@@ -24,6 +24,7 @@ $btn-padding-x-zero: 0;
   background: $background;
   border: $border;
   box-shadow: none !important;
+  font-weight: bold;
 
   &:focus,
   &.focus {
@@ -103,16 +104,3 @@ $btn-padding-x-zero: 0;
     1px solid $grey,
     $white);
 }
-
-/* $border,
-  $color,
-  $active-background,
-  $active-border,
-  $active-color,
-  $hover-bg,
-  $hover-border,
-  $hover-color,
-  $hover-shadow,
-  $disabled-bg,
-  $disabled-border,
-  $disabled-color */

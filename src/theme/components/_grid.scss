@@ -1,14 +1,26 @@
+@import "../variables";
 @import "../mixins";
 
 .display-grid {
     @include display-grid;
 }
 
-.custom-grid-size-30-by-70 {
+.custom-grid-size-50-by-50 {
     width: 100%;
     @include display-grid;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
     place-self: center !important;
+}
+
+@media only screen and (min-width: $md-breakpoint) {
+    .custom-grid-size-50-by-50-md {
+        width: 100%;
+        @include display-grid;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+        place-self: center !important;
+    }
 }

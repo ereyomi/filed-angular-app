@@ -28,3 +28,12 @@
     /* add custom chevron */
     background: transparent url("~src/assets/images/chevron.svg") no-repeat right rem(20) center/rem(14) rem(10);
 }
+
+@media only screen and (min-width: $md-breakpoint) {
+
+    .select {
+        color: var(--app-color-000000);
+        font-size: rem(16);
+        line-height: rem(19);
+    }
+}

@@ -396,3 +396,59 @@ h3 {
 .text-align-center {
   text-align: center;
 }
+
+@media only screen and (min-width: $md-breakpoint) {
+  .text-align-left-md {
+    text-align: left;
+  }
+
+  .roboto-—-s18-h22-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: medium;
+    font-size: rem(18);
+    line-height: rem(22);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s20-h24-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: var(--app-font-weight-normal);
+    font-size: rem(20);
+    line-height: rem(24);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s28-h34-medium-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: medium;
+    font-size: rem(28);
+    line-height: rem(34);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s34-h41-bold-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: bold;
+    font-size: rem(34);
+    line-height: rem(41);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s44-h65-medium-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: medium;
+    font-size: rem(44);
+    line-height: rem(65);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+}

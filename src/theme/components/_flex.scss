@@ -8,15 +8,22 @@
 
 @import "../mixins";
 
+.display-none {
+    display: none;
+}
+
 .display-flex {
     @include flexbox;
 }
+
 .flex-row {
     flex-direction: row;
 }
-.flex-column{
+
+.flex-column {
     flex-direction: column;
 }
+
 .align-self-start {
     align-self: flex-start !important;
 }
@@ -107,4 +114,10 @@
 
 .align-items-baseline {
     align-items: baseline !important;
+}
+
+@media only screen and (min-width: $md-breakpoint) {
+    .display-block-md {
+        display: block !important;
+    }
 }
