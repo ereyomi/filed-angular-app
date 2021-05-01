@@ -28,6 +28,24 @@
     object-fit: cover;
 }
 
+.custom-bg-b {
+    background: url("~src/assets/images/group-391.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (min-width: $md-breakpoint) {
+    .icon-w36-h26-md {
+        width: rem(36);
+        height: rem(26);
+    }
+
+    .custom-bg-b {
+        background: url("~src/assets/images/group-392.svg");
+    }
+}
+
 @media only screen and (min-width: $xl-breakpoint) {
     .img-w728-h440-xl {
         width: rem(728);

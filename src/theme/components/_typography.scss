@@ -251,6 +251,16 @@ h3 {
   color: var(--app-color-000000);
 }
 
+.roboto-—-s16-h28-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-normal);
+  font-size: rem(16);
+  line-height: rem(28);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
 .roboto-—-s16-h28-bold-mobile {
   font-family: var(--app-font-family-roboto);
   font-style: var(--app-font-style-normal);
@@ -402,6 +412,10 @@ h3 {
     text-align: left;
   }
 
+  .text-align-center-md {
+    text-align: center;
+  }
+
   .roboto-—-s18-h22-desktop {
     font-family: var(--app-font-family-roboto);
     font-style: var(--app-font-style-normal);
@@ -422,6 +436,26 @@ h3 {
     color: var(--app-color-000000);
   }
 
+  .roboto-—-s20-h28-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: var(--app-font-weight-normal);
+    font-size: rem(20);
+    line-height: rem(28);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s24-h29-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: var(--app-font-weight-medium);
+    font-size: rem(20);
+    line-height: rem(28);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
   .roboto-—-s28-h34-medium-desktop {
     font-family: var(--app-font-family-roboto);
     font-style: var(--app-font-style-normal);
@@ -436,6 +470,26 @@ h3 {
     font-family: var(--app-font-family-roboto);
     font-style: var(--app-font-style-normal);
     font-weight: bold;
+    font-size: rem(34);
+    line-height: rem(41);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s34-h43-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: medium;
+    font-size: rem(34);
+    line-height: rem(43);
+    letter-spacing: var(--app-character-spacing-0);
+    color: var(--app-color-000000);
+  }
+
+  .roboto-—-s34-h41-desktop {
+    font-family: var(--app-font-family-roboto);
+    font-style: var(--app-font-style-normal);
+    font-weight: normal;
     font-size: rem(34);
     line-height: rem(41);
     letter-spacing: var(--app-character-spacing-0);

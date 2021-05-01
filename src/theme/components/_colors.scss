@@ -12,6 +12,10 @@
     color: $white;
 }
 
+.color-red {
+    background-color: $red;
+}
+
 @media only screen and (min-width: $md-breakpoint) {
 
     .app-color-000000-desktop {

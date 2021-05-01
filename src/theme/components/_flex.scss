@@ -117,6 +117,10 @@
 }
 
 @media only screen and (min-width: $md-breakpoint) {
+    .align-items-center-md {
+        align-items: center !important;
+    }
+
     .display-block-md {
         display: block !important;
     }

@@ -22,6 +22,7 @@
   --app-font-family-roboto: Roboto;
   --app-font-style-normal: normal;
   --app-font-weight-normal: normal;
+  --app-font-weight-medium: medium;
   --app-font-weight-bold: bold;
   --app-font-size-14: 14px;
   --app-font-size-16: 16px;
@@ -98,6 +99,7 @@ $spacers: map-merge((0: 0,
     40: 40px,
     42: 42px,
     44: 44px,
+    45: 45px,
     46: 46px,
     48: 48px,
     52: 52px,
@@ -117,12 +119,14 @@ $spacers: map-merge((0: 0,
     102: 102px,
     144: 144px,
     149: 149px,
+    120: 120px,
     128: 128px,
     130: 130px,
     143: 143px,
     175: 175px,
     178: 178px,
     212: 212px,
+    245: 245px,
   ),
   $spacers);
 
