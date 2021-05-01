@@ -9,3 +9,9 @@
     width: rem(56);
     height: rem(40);
 }
+
+.img-w80-h80 {
+    width: rem(80);
+    height: rem(80);
+    object-fit: cover;
+}

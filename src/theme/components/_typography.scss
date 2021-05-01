@@ -251,6 +251,26 @@ h3 {
   color: var(--app-color-000000);
 }
 
+.roboto-—-s16-h28-bold-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: var(--app-font-style-normal);
+  font-weight: var(--app-font-weight-bold);
+  font-size: rem(16);
+  line-height: rem(28);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
+.roboto-—-s16-h28-italic-normal-mobile {
+  font-family: var(--app-font-family-roboto);
+  font-style: italic;
+  font-weight: var(--app-font-weight-normal);
+  font-size: rem(16);
+  line-height: rem(28);
+  letter-spacing: var(--app-character-spacing-0);
+  color: var(--app-color-000000);
+}
+
 .roboto-—-18pt-body-text {
   font-family: var(--app-font-family-roboto);
   font-style: var(--app-font-style-normal);
