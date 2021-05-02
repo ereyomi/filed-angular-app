@@ -77,6 +77,12 @@
 }
 
 @media only screen and (min-width: $xxxl-breakpoint) {
+
+    .custom-icon-70-by-70,
+    .custom-icon-120-by-132 {
+        display: none;
+    }
+
     .img-w728-h440-xl {
         width: rem(728);
         height: rem(440);
