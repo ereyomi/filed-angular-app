@@ -1,18 +1,41 @@
 <app-card class="px-md-80 px-xxl-78 ml-xl-50 ml-xxl-80 ml-xxxl-145">
   <form class="w-100" [formGroup]="componentForm">
     <p
-    class="display-none display-block-md roboto-—-s34-h41-bold-desktop text-align-center mb-52"
-  >
-    Let's Start
-  </p>
-  <app-input [config]="inputConfig('First Name')" formControlName="firstName"></app-input>
-  <div class="mt-44 mt-md-89">
-    <button class="btn primary-btn w-100">GET STARTED</button>
-  </div>
+      class="display-none display-block-md roboto-—-s34-h41-bold-desktop text-align-center mb-52"
+    >
+      We’ll be in touch to get your trial set up.
+    </p>
+    <p
+      class="px-25 px-xl-64 roboto-—-s18-h26-mobile text-align-center app-color-008cc9-mobile mb-16 mb-md-16 app-color-000000-desktop roboto-—-s20-h24-desktop"
+    >
+      Fill out details
+    </p>
+    <div class="grid-45-by-45 justify-content-between w-100 mb-18">
+      <div>
+        <app-input
+          [config]="inputConfig('First Name')"
+          formControlName="firstName"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [config]="inputConfig('Last Name')"
+          formControlName="firstName"
+        ></app-input>
+      </div>
+    </div>
+    <div class="w-100 mb-18">
+       <app-input
+          [config]="inputConfig('Company name')"
+          formControlName="firstName"
+        ></app-input>
+    </div>
+
+    <div class="mt-44 mt-md-89">
+      <button class="btn primary-btn w-100">GET STARTED</button>
+    </div>
   </form>
 </app-card>
-
-
 
 <ng-template #stepOne>
   <p
