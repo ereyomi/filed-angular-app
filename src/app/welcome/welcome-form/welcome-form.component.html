@@ -13,26 +13,34 @@
     <div class="grid-45-by-45 justify-content-between w-100 mb-18">
       <div>
         <app-input
-          [config]="inputConfig('First Name')"
+          [config]="inputConfig('First Name *')"
           formControlName="firstName"
         ></app-input>
       </div>
       <div>
         <app-input
-          [config]="inputConfig('Last Name')"
+          [config]="inputConfig('Last Name *')"
           formControlName="firstName"
         ></app-input>
       </div>
     </div>
     <div class="w-100 mb-18">
-       <app-input
-          [config]="inputConfig('Company name')"
-          formControlName="firstName"
-        ></app-input>
+      <app-input
+        [config]="inputConfig('Company name *')"
+        formControlName="firstName"
+      ></app-input>
     </div>
 
-    <div class="mt-44 mt-md-89">
-      <button class="btn primary-btn w-100">GET STARTED</button>
+    <div class="w-100 mb-18">
+      <select class="select color-black">
+        <option value="">Monthly Advertising Budget *</option>
+      </select>
+    </div>
+
+    <div class="mt-18 mt-md-18">
+      <button class="btn primary-btn w-100" type="submit">
+        GET FREE TRIAL
+      </button>
     </div>
   </form>
 </app-card>
@@ -63,7 +71,9 @@
     What's your monthly ad budget?
   </p>
   <div class="mt-13">
-    <app-select></app-select>
+    <select class="select">
+      <option value="">Select</option>
+    </select>
   </div>
   <div class="mt-44 mt-md-89">
     <button class="btn primary-btn w-100">GET STARTED</button>

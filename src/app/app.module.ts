@@ -8,7 +8,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { InputComponent } from './shared/input/input.component';
 import { CardComponent } from './shared/card/card.component';
 import { RadioInputComponent } from './shared/radio-input/radio-input.component';
-import { SelectComponent } from './shared/select/select.component';
 import { WelcomeFormComponent } from './welcome/welcome-form/welcome-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -19,7 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputComponent,
     CardComponent,
     RadioInputComponent,
-    SelectComponent,
     WelcomeFormComponent
   ],
   imports: [
