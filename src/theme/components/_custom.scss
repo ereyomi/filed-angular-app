@@ -1,0 +1,65 @@
+@import "../mixins";
+@import "../variables";
+
+.custom-tel-form {
+    @include display-grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    place-items: center !important;
+    border: 1px solid var(--app-color-dedede);
+    padding: 0 20px;
+    border-radius: rem(5);
+
+    select {
+        font: var(--app-font-style-normal) normal var(--app-font-weight-normal) var(--app-font-size-14)/var(--app-line-spacing-17) var(--app-font-family-roboto);
+        letter-spacing: var(--app-character-spacing-0);
+        color: $black;
+        text-align: left;
+        letter-spacing: 0px;
+        padding: 10px 20px 10px 0;
+        width: 100%;
+        border: none;
+        /* remove the default arrow */
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+
+        /*  */
+        &::-ms-expand {
+            display: none;
+            /* Remove default arrow in Internet Explorer 10 and 11 */
+        }
+
+        /* add custom chevron */
+        background: transparent url("~src/assets/images/chevron.svg") no-repeat right rem(20) center/rem(14) rem(10);
+
+        option {
+            color: inherit;
+        }
+    }
+
+    input {
+        font: var(--app-font-style-normal) normal var(--app-font-weight-normal) var(--app-font-size-14)/var(--app-line-spacing-17) var(--app-font-family-roboto);
+        letter-spacing: var(--app-character-spacing-0);
+        color: $black;
+        width: 100%;
+        border: none;
+        display: block;
+        transition: all .1s ease-in-out .3s;
+        outline: none;
+        border-bottom: 1px solid var(--app-color-dedede);
+
+        &:invalid {
+            border: 1px solid $red;
+        }
+
+        &:focus {
+            color: $black !important;
+        }
+
+    }
+
+
+
+}

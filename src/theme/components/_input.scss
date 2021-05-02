@@ -12,8 +12,6 @@
         font: var(--app-font-style-normal) normal var(--app-font-weight-normal) var(--app-font-size-14)/var(--app-line-spacing-17) var(--app-font-family-roboto);
         letter-spacing: var(--app-character-spacing-0);
         color: $black;
-        font-size: rem(14) !important;
-        line-height: rem(17) !important;
         padding: rem(12) rem(20);
         border-radius: rem(5);
         width: 100%;
@@ -21,6 +19,7 @@
         background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
         border: 1px solid var(--app-color-dedede);
         display: block;
+        outline: none;
         transition: all .1s ease-in-out .3s;
 
         &.input-error,

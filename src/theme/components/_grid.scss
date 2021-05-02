@@ -12,16 +12,13 @@
 .grid-45-by-45 {
     width: 100%;
     @include display-grid;
-    display: grid;
     grid-template-columns: repeat(2, 45%);
     grid-template-rows: auto;
-    place-items: center !important;
 }
 
 .custom-grid {
     width: 100%;
     @include display-grid;
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
 }
@@ -29,7 +26,6 @@
 .custom-grid-b {
     width: 100%;
     @include display-grid;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(341px, 1fr));
     grid-template-rows: auto;
     gap: rem(80);
@@ -40,7 +36,6 @@
     .grid-50-by-50-md {
         width: 100%;
         @include display-grid;
-        display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: auto;
         place-items: center !important;
@@ -55,7 +50,6 @@
     .custom-grid {
         width: 100%;
         @include display-grid;
-        display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: auto;
     }
