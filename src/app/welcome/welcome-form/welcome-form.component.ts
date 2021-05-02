@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { InputConfig } from './models/input-config';
 
 @Component({
   selector: 'app-welcome-form',
@@ -12,9 +13,25 @@ export class WelcomeFormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.initForm();
+  }
+  inputConfig(
+    label: string,
+    type: string = 'text',
+  ): InputConfig {
+    return {
+      inputLabel: {
+        text: label || '',
+      },
+      type: type || 'text',
+    };
   }
   initForm(): void {
     this.componentForm = this.fb.group({
+      firstName: [
+        '',
+        Validators.required,
+      ],
     });
   }
 

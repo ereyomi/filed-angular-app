@@ -1,5 +1,6 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { InputConfig } from 'src/app/welcome/welcome-form/models/input-config';
 
 @Component({
   selector: 'app-input',
@@ -17,7 +18,7 @@ import { ControlValueAccessor, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/f
 export class InputComponent implements OnInit, ControlValueAccessor {
 
 
-  @Input() config!: any;
+  @Input() config!: InputConfig;
   @Input() class!: string | '';
 
   onChange!: (_: any) => void;
