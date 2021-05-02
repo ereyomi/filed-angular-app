@@ -1,1 +1,96 @@
-.input {}
+@import "../mixins";
+@import "../variables";
+
+.app-form {
+    @include flexbox;
+    @include flex-direction(column-reverse);
+    width: 100%;
+    @include align-items(flex-start);
+    position: relative;
+}
+
+.form-input {
+    @include flexbox;
+    width: 100%;
+    @include justify-content(flex-start);
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+    position: relative;
+
+    input {
+        font-family: Roboto;
+        font-weight: normal;
+        font-style: normal;
+        color: $black;
+        font-size: rem(14) !important;
+        line-height: rem(17) !important;
+        padding: rem(12) rem(20);
+        border-radius: rem(5);
+        letter-spacing: 0;
+        width: 100%;
+        border: none;
+        background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
+        border: 1px solid var(--app-color-dedede);
+        display: block;
+        transition: all .1s ease-in-out .3s;
+
+        @include inputPlaceholder() {
+            color: $black;
+            opacity: 1;
+        }
+
+        &.input-error,
+        &:invalid {
+            border: 1px solid $red;
+
+            @include inputPlaceholder() {
+                color: $red;
+            }
+        }
+
+        &:hover {
+            border: 1px solid var(--app-color-008cc9);
+        }
+
+        &:focus {
+            color: $black !important;
+            border: 1px solid var(--app-color-008cc9);
+
+            @include inputPlaceholder() {
+                opacity: 0;
+            }
+        }
+
+    }
+
+    &+label {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        z-index: 100;
+        opacity: 1;
+        transition: all .1s ease-in-out .3s;
+        color: black;
+        font: var(--app-font-style-normal) normal var(--app-font-weight-normal) var(--app-font-size-14)/var(--app-line-spacing-17) var(--app-font-family-roboto);
+        letter-spacing: var(--app-character-spacing-0);
+
+        &:focus-within,
+        &:hover {
+            top: -8px;
+            color: var(--app-color-707070);
+            background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
+            padding: 0px 5px;
+            display: inline-block;
+        }
+    }
+
+    &:focus-within {
+        &+label {
+            top: -8px;
+            color: var(--app-color-707070);
+            background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
+            display: inline-block;
+            padding: 0px 5px;
+        }
+    }
+}
