@@ -14,9 +14,6 @@ export class DisplaypageComponent implements OnInit {
   constructor(private store: Store<UserState>) { }
 
   ngOnInit(): void {
-    /* this.store.pipe(select(getPaymentSelector)).subscribe(payment => {
-      this.paymentData = payment;
-    }); */
   }
 
 }

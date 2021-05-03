@@ -44,6 +44,10 @@
     .justify-items-start-md {
         justify-items: start;
     }
+
+    .custom-grid {
+        place-items: center;
+    }
 }
 
 @media only screen and (min-width: $xl-breakpoint) {

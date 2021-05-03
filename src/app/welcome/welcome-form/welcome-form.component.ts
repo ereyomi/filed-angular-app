@@ -71,7 +71,7 @@ export class WelcomeFormComponent implements OnInit {
         '',
         Validators.required,
       ],
-      tel: [
+      phoneNumber: [
         '',
         Validators.required,
       ],
