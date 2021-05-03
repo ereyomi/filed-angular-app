@@ -8,7 +8,7 @@ export let initialState: UserState = {
         firstName: 'ereyomi',
         lastName: 'ereyomi',
         monthlyAdvertisingBudget: 0,
-        country: 'dgjdhgd',
+        companyName: 'dgjdhgd',
         phoneNumber: 0
     }
 };

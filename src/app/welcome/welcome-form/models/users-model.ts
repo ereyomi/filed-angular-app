@@ -1,7 +1,7 @@
 export interface UserModel {
     firstName: string;
     lastName: string;
-    country: string;
+    companyName: string;
     monthlyAdvertisingBudget: number | string;
     phoneNumber: string | number;
 }
