@@ -10,6 +10,7 @@ import { CardComponent } from './shared/card/card.component';
 import { RadioInputComponent } from './shared/radio-input/radio-input.component';
 import { WelcomeFormComponent } from './welcome/welcome-form/welcome-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { userReducer } from './welcome/store/welcome-reducer';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({user:userReducer}),
     ReactiveFormsModule,
   ],
   providers: [],

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { AddUser } from '../store/welcome-action';
 import { InputConfig } from './models/input-config';
 
 @Component({
@@ -10,7 +12,7 @@ import { InputConfig } from './models/input-config';
 export class WelcomeFormComponent implements OnInit {
 
   componentForm!: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private store: Store<any>) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -33,6 +35,9 @@ export class WelcomeFormComponent implements OnInit {
         Validators.required,
       ],
     });
+  }
+  submit() {
+    this.store.dispatch(new AddUser({ firstName: 'ere' }));
   }
 
 }
