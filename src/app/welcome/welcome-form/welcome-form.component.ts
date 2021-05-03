@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { InputConfig } from './models/input-config';
 import * as UserActions from './../store/welcome-action';
-import { UserState } from '../store/welcome-reducer';
 @Component({
   selector: 'app-welcome-form',
   templateUrl: './welcome-form.component.html',
@@ -34,6 +33,17 @@ export class WelcomeFormComponent implements OnInit {
         '',
         Validators.required,
       ],
+      lastName: [
+        '',
+        Validators.required,
+      ],
+      companyName: [
+        '',
+        Validators.required,
+      ],
+      monthlyAdvertisingBudget: [
+        '', Validators.required,
+      ]
     });
   }
   submit() {

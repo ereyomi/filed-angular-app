@@ -1,9 +1,7 @@
-import { UserModel } from "../welcome-form/models/users-model";
+import { UserState } from "./user-state";
 import { UserActions, UserActionTypes } from "./welcome-action";
 
-export interface UserState {
-    payload: UserModel | null,
-}
+
 export let initialState: UserState = {
     payload: null,
 };

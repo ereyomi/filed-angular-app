@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WelcomeFormComponent } from './welcome-form/welcome-form.component';
 import { WelcomeComponent } from './welcome.component';
 import { SharedModule } from '../shared/shared.module';
-import { WelcomeRoutingModule } from './welcome-routing-module';
+import { WelcomeRoutingModule } from './welcome-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { userReducer } from './store/welcome-reducer';
 
