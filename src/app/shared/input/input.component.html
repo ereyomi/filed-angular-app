@@ -13,6 +13,7 @@
           config?.autoCapitalize !== '' ? config?.autoCapitalize : 'none'
         "
         [class]="config?.inputClasses"
+        [placeholder]="config?.inputLabel?.text || 'Text Here'"
         />
     <label [class]="config?.inputLabel?.classes">{{ config?.inputLabel?.text }}</label>
   </div>

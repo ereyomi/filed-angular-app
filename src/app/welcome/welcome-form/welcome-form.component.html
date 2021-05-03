@@ -20,29 +20,30 @@
       <div>
         <app-input
           [config]="inputConfig('Last Name *')"
-          formControlName="firstName"
+          formControlName="lastName"
         ></app-input>
       </div>
     </div>
     <div class="w-100 mb-18">
       <app-input
         [config]="inputConfig('Company name *')"
-        formControlName="firstName"
+        formControlName="companyName"
       ></app-input>
     </div>
 
     <div class="w-100 mb-18">
-      <select class="select color-black" formControlName="firstName">
+      <select class="select color-black" formControlName="monthlyAdvertisingBudget">
         <option value="">Monthly Advertising Budget *</option>
       </select>
     </div>
 
-    <div class="w-100">
+    <div class="w-100" *ngIf="countryDialCode">
       <div class="custom-tel-form">
-        <select formControlName="firstName">
-          <option value="">Romania (Roman)</option>
+        <select formControlName="dialCode">
+          <option value="">Select Country</option>
+          <option [value]="item.dial_code" *ngFor="let item of countryDialCode | async as list">{{item.name}} ({{item.dial_code}})</option>
         </select>
-        <input type="tel" formControlName="firstName" />
+        <input type="tel" formControlName="tel" />
       </div>
     </div>
 
