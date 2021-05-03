@@ -14,10 +14,10 @@
     > npm install
 ```
 
-4. Run the app
+4. Run the app in Dev
 
 ```bash
-	> ng run
+	> ng serve
 ```
 
 
