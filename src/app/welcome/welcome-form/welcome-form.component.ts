@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { AddUser } from '../store/welcome-action';
 import { InputConfig } from './models/input-config';
-
+import * as UserActions from './../store/welcome-action';
 @Component({
   selector: 'app-welcome-form',
   templateUrl: './welcome-form.component.html',
@@ -37,7 +36,8 @@ export class WelcomeFormComponent implements OnInit {
     });
   }
   submit() {
-    this.store.dispatch(new AddUser({ firstName: 'ere' }));
+    console.log('clicked');
+    this.store.dispatch(new UserActions.AddUser({ firstName: 'ere' }));
   }
 
 }

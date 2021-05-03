@@ -1,10 +1,7 @@
 import { createAction, props, Action } from "@ngrx/store";
 import { UserModel } from "../welcome-form/models/users-model";
 
-export interface UserActionModel {
-    type: string,
-    payload: UserModel;
-}
+
 export enum UserActionTypes {
     ADD_USER = '[User Data] Add User',
     REMOVE_USER = '[User Data] remove User'
@@ -18,5 +15,9 @@ export class AddUser implements Action {
     readonly type = UserActionTypes.ADD_USER;
     constructor(public payload: UserModel) { }
 }
+export class RemoveUser implements Action {
+    readonly type = UserActionTypes.REMOVE_USER;
+    constructor(public payload: UserModel) { }
+}
 
-export type userActions = AddUser;
+export type UserActions = AddUser | RemoveUser;
