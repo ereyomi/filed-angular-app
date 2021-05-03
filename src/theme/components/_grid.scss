@@ -47,6 +47,14 @@
 }
 
 @media only screen and (min-width: $xl-breakpoint) {
+    .grid-50-by-50-xl {
+        width: 100%;
+        @include display-grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+        place-items: center !important;
+    }
+
     .custom-grid {
         width: 100%;
         @include display-grid;

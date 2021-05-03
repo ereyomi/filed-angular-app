@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { UserState } from '../welcome/store/user-state';
+import { getPaymentSelector } from '../welcome/store/welcome-reducer';
 
 @Component({
   selector: 'app-displaypage',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplaypageComponent implements OnInit {
 
-  constructor() { }
+  paymentData!: any;
+  constructor(private store: Store<UserState>) { }
 
   ngOnInit(): void {
+    this.store.pipe(select(getPaymentSelector)).subscribe(payment => {
+      this.paymentData = payment;
+    });
   }
 
 }

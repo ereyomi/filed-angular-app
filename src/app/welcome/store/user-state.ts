@@ -1,5 +1,5 @@
 import { UserModel } from "../welcome-form/models/users-model";
-
-export interface UserState {
-    payload: UserModel | null,
+import * as forRoot from "../../core/store/app-state";
+export interface UserState extends forRoot.AppState {
+    payment: UserModel | null;
 }

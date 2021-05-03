@@ -1,7 +1,7 @@
 export interface UserModel {
-    firstName?: string;
-    lastName?: string;
-    email?: string;
-    monthlyAdvertisingBudget?: string;
-    phoneNumber?: string | number;
+    firstName: string;
+    lastName: string;
+    country: string;
+    monthlyAdvertisingBudget: number | string;
+    phoneNumber: string | number;
 }

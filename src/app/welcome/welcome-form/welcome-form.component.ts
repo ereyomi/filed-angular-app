@@ -3,8 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { InputConfig } from './models/input-config';
 import * as UserActions from './../store/welcome-action';
-import { CountryDialCodeModel, CountryDialCodeService } from 'src/app/core/services/country-dial-code/country-dial-code.service';
+import { CountryDialCodeService } from 'src/app/core/services/country-dial-code/country-dial-code.service';
 import { Observable } from 'rxjs';
+import { CountryDialCodeWithCurrencyModel } from 'src/app/core/model/country-dial-code-with-currency-model';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+import { UserState } from '../store/user-state';
+import { getPaymentSelector } from '../store/welcome-reducer';
 @Component({
   selector: 'app-welcome-form',
   templateUrl: './welcome-form.component.html',
@@ -13,11 +18,23 @@ import { Observable } from 'rxjs';
 export class WelcomeFormComponent implements OnInit {
 
   componentForm!: FormGroup;
-  countryDialCode: Observable<Array<CountryDialCodeModel>> | undefined = this.countryDialS.getCountryDialCodes();
-  constructor(private fb: FormBuilder, private store: Store<any>, private countryDialS: CountryDialCodeService) { }
+  countryDialCode: Observable<Array<CountryDialCodeWithCurrencyModel>> | undefined = this.countryDialS.getCountryDialCodes();
+  condition!: string;
+  steps = {
+    stepOne: 'stepOne',
+    stepTwo: 'stepTwo',
+  };
+  constructor(
+    private fb: FormBuilder,
+    private store: Store<UserState>,
+    private countryDialS: CountryDialCodeService,
+    private toastrService: ToastrService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.initForm();
+    this.defaultStep();
   }
   inputConfig(
     label: string,
@@ -59,9 +76,25 @@ export class WelcomeFormComponent implements OnInit {
       ],
     });
   }
-  submit() {
-    console.log('clicked', this.componentForm.value);
-    this.store.dispatch(new UserActions.AddUser({ firstName: 'ere' }));
+  submit(): void {
+    if (this.componentForm.valid) {
+      this.store.dispatch(new UserActions.AddUser(this.componentForm.value));
+      this.toastrService.success('Processing Payment', 'SUCCESS', {
+        timeOut: 1000
+      });
+      this.router.navigateByUrl('/display');
+      
+    } else {
+      this.toastrService.error('Unable to dispatch at this instant', 'ERROR', {
+        timeOut: 3000
+      });
+    }
+  }
+  defaultStep(): void {
+    this.condition = this.steps.stepTwo;
+  };
+  switchStepTwo(): void {
+    this.condition = this.steps.stepTwo;
   }
 
 }

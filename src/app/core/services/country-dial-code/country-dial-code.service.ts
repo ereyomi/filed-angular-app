@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { CountryDialCodeWithCurrencyModel } from '../../model/country-dial-code-with-currency-model';
 import { RequestService } from '../request/request.service';
 
-export interface CountryDialCodeModel {
-  name: string;
-  dial_code: string;
-  code: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +10,7 @@ export interface CountryDialCodeModel {
 export class CountryDialCodeService {
 
   constructor(private resquestS: RequestService) { }
-  getCountryDialCodes(): Observable<Array<CountryDialCodeModel>> {
-    return this.resquestS.get('./assets/mock-data/countries-dial.json');
+  getCountryDialCodes(): Observable<CountryDialCodeWithCurrencyModel[]> {
+    return this.resquestS.get<CountryDialCodeWithCurrencyModel[]>('./assets/mock-data/countries-dial-with-currency.json');
   }
 }
