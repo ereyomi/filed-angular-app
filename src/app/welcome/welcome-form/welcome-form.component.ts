@@ -7,7 +7,7 @@ import { CountryDialCodeService } from 'src/app/core/services/country-dial-code/
 import { Observable } from 'rxjs';
 import { CountryDialCodeWithCurrencyModel } from 'src/app/core/model/country-dial-code-with-currency-model';
 import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserState } from '../store/user-state';
 import { getPaymentSelector } from '../store/welcome-reducer';
 @Component({
@@ -30,6 +30,7 @@ export class WelcomeFormComponent implements OnInit {
     private countryDialS: CountryDialCodeService,
     private toastrService: ToastrService,
     private router: Router,
+    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
@@ -82,8 +83,8 @@ export class WelcomeFormComponent implements OnInit {
       this.toastrService.success('Processing Payment', 'SUCCESS', {
         timeOut: 1000
       });
-      this.router.navigateByUrl('/display');
-      
+      this.router.navigate(['display'], { relativeTo: this.activatedRoute });
+
     } else {
       this.toastrService.error('Unable to dispatch at this instant', 'ERROR', {
         timeOut: 3000

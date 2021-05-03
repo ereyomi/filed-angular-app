@@ -11,10 +11,6 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then((m) => m.WelcomeModule),
   },
-  {
-    path: 'display',
-    loadChildren: () => import('./displaypage/displaypage.module').then((m) => m.DisplaypageModule),
-  },
   { path: '**', redirectTo: 'welcome' },
 ];
 

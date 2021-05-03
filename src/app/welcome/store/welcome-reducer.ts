@@ -13,7 +13,7 @@ export let initialState: UserState = {
     }
 };
 
-const paymentSelector = createFeatureSelector<UserState>('payment');
+const paymentSelector = createFeatureSelector<UserState>('welcome');
 export const getPaymentSelector = createSelector(
     paymentSelector,
     state => state.payment,
