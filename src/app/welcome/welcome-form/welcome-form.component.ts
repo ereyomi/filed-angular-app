@@ -86,7 +86,7 @@ export class WelcomeFormComponent implements OnInit {
       this.router.navigate(['display'], { relativeTo: this.activatedRoute });
 
     } else {
-      this.toastrService.error('Unable to dispatch at this instant', 'ERROR', {
+      this.toastrService.error('Looks like you are yet to completely fill the form', 'ERROR', {
         timeOut: 3000
       });
     }
