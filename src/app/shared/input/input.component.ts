@@ -63,7 +63,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   }
 
   get isDisable() {
-    return this.config?.formStatus || false;
+    return this.config?.formStatus?.isDisabled || false;
   }
 
 }

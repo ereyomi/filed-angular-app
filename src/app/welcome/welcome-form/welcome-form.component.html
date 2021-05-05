@@ -64,27 +64,47 @@
     <div class="grid-45-by-45 justify-content-between w-100 mb-18">
       <div>
         <app-input
-          [config]="inputConfig('First Name *')"
+          [config]="
+            inputConfig(
+              'First Name *',
+              'text',
+              componentForm.controls.firstName
+            )
+          "
           formControlName="firstName"
         ></app-input>
       </div>
       <div>
         <app-input
-          [config]="inputConfig('Last Name *')"
+          [config]="
+            inputConfig('Last Name *', 'text', componentForm.controls.lastName)
+          "
           formControlName="lastName"
         ></app-input>
       </div>
     </div>
     <div class="w-100 mb-18">
       <app-input
-        [config]="inputConfig('Company name *')"
+        [config]="
+          inputConfig(
+            'Company name *',
+            'text',
+            componentForm.controls.companyName
+          )
+        "
         formControlName="companyName"
       ></app-input>
     </div>
 
     <div class="w-100 mb-18">
       <app-input
-        [config]="inputConfig('Monthly Advertising Budget *', 'number')"
+        [config]="
+          inputConfig(
+            'Monthly Advertising Budget *',
+            'number',
+            componentForm.controls.monthlyAdvertisingBudget
+          )
+        "
         formControlName="monthlyAdvertisingBudget"
       ></app-input>
     </div>

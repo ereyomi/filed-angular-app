@@ -8,6 +8,21 @@
     @include align-items(center);
     position: relative;
 
+    &.error {
+        input {
+            border: 1px solid $red;
+
+            &~label {
+                top: -8px;
+                left: 15px;
+                color:$red;
+                background: var(--app-color-fbfbfb) 0% 0% no-repeat padding-box;
+                display: inline-block;
+                padding: 0px 5px;
+            }
+        }
+    }
+
     input {
         font: var(--app-font-style-normal) normal var(--app-font-weight-normal) var(--app-font-size-14)/var(--app-line-spacing-17) var(--app-font-family-roboto);
         letter-spacing: var(--app-character-spacing-0);
