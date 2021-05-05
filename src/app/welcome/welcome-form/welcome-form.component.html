@@ -43,7 +43,9 @@
     </select>
   </div>
   <div class="mt-44 mt-md-89">
-    <button class="btn primary-btn w-100" (click)="switchStepTwo()">GET STARTED</button>
+    <button class="btn primary-btn w-100" (click)="switchStepTwo()">
+      GET STARTED
+    </button>
   </div>
 </ng-template>
 
@@ -98,7 +100,7 @@
             {{ item.Name }} ({{ item.Dial }})
           </option>
         </select>
-        <input type="tel" formControlName="tel" placeholder="1234567"/>
+        <input type="tel" formControlName="phoneNumber" placeholder="1234567" />
       </div>
     </div>
 
