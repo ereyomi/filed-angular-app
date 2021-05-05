@@ -37,7 +37,7 @@ export class WelcomeFormComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.defaultStep();
-    this.componentForm.valueChanges.subscribe(v => console.log(this.componentForm.controls.firstName));
+    this.componentForm.valueChanges.subscribe(v => console.log(this.componentForm.controls.lastName));
   }
   inputConfig(
     label: string,
@@ -50,7 +50,7 @@ export class WelcomeFormComponent implements OnInit {
       },
       type: type || 'text',
       formStatus: {
-        isError: formControl ? ((formControl.invalid || formControl.dirty) ? true : false) : false,
+        isError: formControl ? ((formControl.invalid && formControl.dirty) ? true : false) : false,
       }
     };
   }
@@ -64,14 +64,16 @@ export class WelcomeFormComponent implements OnInit {
       ],
       lastName: [
         null,
-        Validators.required,
+        [
+          Validators.required,
+        ]
       ],
       companyName: [
-        '',
+        null,
         Validators.required,
       ],
       monthlyAdvertisingBudget: [
-        '', Validators.required,
+        null, Validators.required,
       ],
       dialCode: [
         '',
