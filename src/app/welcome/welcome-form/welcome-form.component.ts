@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, AbstractControlDirective, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { InputConfig } from './models/input-config';
 import * as UserActions from './../store/welcome-action';
@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserState } from '../store/user-state';
 import { getPaymentSelector } from '../store/welcome-reducer';
+import { ConditionalExpr } from '@angular/compiler';
 @Component({
   selector: 'app-welcome-form',
   templateUrl: './welcome-form.component.html',
@@ -36,16 +37,21 @@ export class WelcomeFormComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.defaultStep();
+    this.componentForm.valueChanges.subscribe(v => console.log(this.componentForm.controls.firstName));
   }
   inputConfig(
     label: string,
     type: string = 'text',
+    formControl: AbstractControl | null = null
   ): InputConfig {
     return {
       inputLabel: {
         text: label || '',
       },
       type: type || 'text',
+      formStatus: {
+        isError: formControl ? ((formControl.invalid || formControl.dirty) ? true : false) : false,
+      }
     };
   }
   initForm(): void {
@@ -86,6 +92,9 @@ export class WelcomeFormComponent implements OnInit {
       this.router.navigate(['display'], { relativeTo: this.activatedRoute });
 
     } else {
+      this.componentForm.markAllAsTouched();
+      this.markDirty();
+      this.componentForm.updateValueAndValidity();
       this.toastrService.error('Looks like you are yet to completely fill the form', 'ERROR', {
         timeOut: 3000
       });
@@ -96,6 +105,44 @@ export class WelcomeFormComponent implements OnInit {
   };
   switchStepTwo(): void {
     this.condition = this.steps.stepTwo;
+  }
+  markDirty() {
+    this.markGroupDirty(this.componentForm);
+  }
+  markGroupDirty(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(key => {
+      if (formGroup.get(key) && formGroup.get(key).constructor.name) {
+        switch (formGroup.get(key).constructor.name) {
+          case 'FormGroup':
+            this.markGroupDirty(formGroup.get(key) as FormGroup);
+            break;
+          case 'FormArray':
+            this.markArrayDirty(formGroup.get(key) as FormArray);
+            break;
+          case 'FormControl':
+            this.markControlDirty(formGroup.get(key) as FormControl);
+            break;
+        }
+      }
+    });
+  }
+  markArrayDirty(formArray: FormArray) {
+    formArray.controls.forEach(control => {
+      switch (control.constructor.name) {
+        case 'FormGroup':
+          this.markGroupDirty(control as FormGroup);
+          break;
+        case 'FormArray':
+          this.markArrayDirty(control as FormArray);
+          break;
+        case 'FormControl':
+          this.markControlDirty(control as FormControl);
+          break;
+      }
+    });
+  }
+  markControlDirty(formControl: FormControl) {
+    formControl.markAsDirty();
   }
 
 }
