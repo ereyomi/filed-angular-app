@@ -59,7 +59,7 @@ export class WelcomeFormComponent implements OnInit {
       firstName: [
         null,
         [
-          Validators.min(10)
+          Validators.required
         ]
       ],
       lastName: [
