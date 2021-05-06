@@ -60,6 +60,14 @@
         }
 
     }
+
+    &.custom-tel-form-error {
+        border: 1px solid $red;
+
+        input {
+            border-bottom: 1px solid $red;
+        }
+    }
 }
 
 .invalid-feedback {
