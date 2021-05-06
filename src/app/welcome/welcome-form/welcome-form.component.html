@@ -110,7 +110,16 @@
     </div>
 
     <div class="w-100" *ngIf="countryDialCode">
-      <div class="custom-tel-form">
+      <div
+        [class]="
+          'custom-tel-form ' +
+          (((componentForm.controls.dialCode.invalid &&
+            componentForm.controls.dialCode.dirty) ||
+            (componentForm.controls.phoneNumber.invalid &&
+              componentForm.controls.phoneNumber.dirty)) &&
+            ' custom-tel-form-error ')
+        "
+      >
         <select formControlName="dialCode">
           <option value="">Select Country</option>
           <option
